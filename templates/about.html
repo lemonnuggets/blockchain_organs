@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block head %}
+<title>About</title>
+<style>
+    a:link {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(243, 194, 255);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: rgb(110, 68, 105);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    .info {
+        font-size: 20px;
+        font-family: "Arial";
+        padding: 15px;
+    }
+    .info > * {
+        text-align: center;
+    }
+</style>
+{% endblock %} {% block body %}
+<div class="container">
+    <div class="title">
+        <h1>About us</h1>
+    </div>
+    <div class="info">
+        <p>
+            We, at healthBlok, are a group of highly professional engineers,
+            committed to deliver the highest quality central management systems,
+            for hospital chains and networks in the country and worldwide. With
+            a team of youthful tech enthusiasts who want to leave their mark on
+            the world, HealthBlok is your one stop solution for secure and
+            simple record management services.
+        </p>
+        <br>
+        <p>
+            Running through it shortly, the team consists of Adam Nellissery
+            Jijo, our very own tech wizard and blockchain specialist;
+        </p>
+        <br>
+        <p>
+            Preet Aryan Gupta, resident crypto-enthusiast, front-end developer, graphic designer and
+            the person behind our Digital Signature implementation ;
+        </p>
+        <br>
+        <p>
+            Mohamed Ibrahim, front-end developer (javascript) and the owner of the brain
+            that birthed this website;
+        </p>
+        <br>
+        <p>
+            and Aditya Jha, working on the back-end and the creator of this very
+            page, helping the folks with a little bit of front-end development.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

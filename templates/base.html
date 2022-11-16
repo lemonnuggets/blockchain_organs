@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-style: inherit;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .title {
+                font-size: 30px;
+                text-align: center;
+                background-color: #7b33ff;
+                color: white;
+                width: 100%;
+                padding: 15px;
+            }
+            .container {
+                margin-top: 30px;
+                display: flex;
+                width: 80%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+                border: lightblue 1px solid;
+                padding: 0;
+            }
+            .header{
+                text-align: center;
+                color: rgb(255, 255, 255);
+                background: #7b33ff;
+                width: 90%;
+                padding: 20px;
+                display: flex;
+                justify-content: space-around;
+            }
+            button, input[type="submit"]{
+                background: #7b33ff;
+                color: rgb(255, 255, 255);
+                border: black 1px solid;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+            }
+            input, select{
+                padding: 10px;
+                border: black 1px solid;
+                border-radius: 5px;
+            }
+        </style>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div class="header">
+            <a href="home"><h3>Home</h3></a>
+            <a href="blockchain"><h3>BlockChain</h3></a>
+            <a href="about"><h3>About us</h3></a>
+        </div>
+        {% block body %}{% endblock %}
+    </body>
+</html>

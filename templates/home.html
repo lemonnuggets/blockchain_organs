@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block head %}
+<title>Home</title>
+<style>
+    a:link {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(243, 194, 255);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: rgb(110, 68, 105);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    .container{
+        width: 70%;
+    }
+    .footer{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: #7b33ff;
+        width: 100%;
+        padding: 20px;
+    }
+</style>
+{% endblock %} {% block body %}
+<div class="container">
+    <img src="{{ url_for('static', filename='assets/HealthBlok.png') }}" alt="Home page pic" style="width: 100%" />
+    <table class="footer" >
+        <tr>
+            <td><h3>A Healthy revolution</h3></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

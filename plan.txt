@@ -1,0 +1,21 @@
+create user{
+username, password, privilegeLevel, type
+} => public_key, private_key, status
+
+authenticate{
+username, password
+} => public_key, private_key, status
+
+add diagnosis{
+doctor_public_key, patient_public_key, diagnosis: {disease, prescription}, [signature]
+} => status
+
+patient history{
+doctor_public_key, patient_public_key, [signature]
+} => [diagnosis], status
+
+------------------------------
+
+delete user{
+doctor_public_key, patient_public_key, [signature]
+}, status

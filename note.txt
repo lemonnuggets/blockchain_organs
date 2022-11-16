@@ -1,0 +1,24 @@
+{
+    "data": {
+        "action": "create_user",
+        "name": "adam",
+        "private key": 159,
+        "public_key": 168624,
+        "type": "doctor"
+    },
+    "error_code": "0",
+    "message": "User created",
+    "status": "success"
+}
+{
+    "data": {
+        "action": "create_user",
+        "name": "preet",
+        "private key": 509,
+        "public_key": 214055,
+        "type": "patient"
+    },
+    "error_code": "0",
+    "message": "User created",
+    "status": "success"
+}

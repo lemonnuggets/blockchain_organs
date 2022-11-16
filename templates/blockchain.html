@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block head %}
+<title>Blockchain</title>
+<style>
+    a:link {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(243, 194, 255);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: rgb(110, 68, 105);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    .request-form {
+        padding: 20px;
+    }
+    .create-user-form, .delete-user-form, .diagnose-form, .read-form{
+        display: flex;
+        flex-direction: column;
+    }
+    pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+    .string { color: lightcoral; }
+    .number { color: purple; }
+    .boolean { color: blue; }
+    .null { color: cyan; }
+    .key { color: darkblue; }
+</style>
+<script defer src="{{url_for('static', filename='js/blockchain.js')}}"></script>
+{% endblock %} {% block body %}
+<div class="container">
+    <div class="title">
+        <h1>Make Request</h1>
+    </div>
+    <form action="/blockchain" class="request-form">
+        <label for="action" class="action">Select action</label>
+        <select name="action" id="action" class="action">
+            <option value="none">--none--</option>
+            <option value="create_user">Create User</option>
+            <option value="delete_user">Delete User</option>
+            <option value="diagnose">Add patient diagnosis</option>
+            <option value="read">Read patient history</option>
+        </select>
+    </form>
+</div>
+<div class="container">
+    <div class="title">
+        Response
+    </div>
+    <pre class="response-content">
+    </pre>
+</div>
+{% endblock %}
